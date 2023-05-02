@@ -6,19 +6,27 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Done
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusDirection
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.erkindilekci.notebook.MainBannerAdView
+import com.erkindilekci.notebook.R
 import com.erkindilekci.notebook.noteaddscreen.NoteAddTopAppBar
 import com.erkindilekci.notebook.room.Note
+import com.erkindilekci.notebook.ui.theme.Blue500
+import com.erkindilekci.notebook.ui.theme.Blue600
 
 @Composable
 fun NoteDetailScreen(sentNote: Note, navController: NavController, viewModel: NoteDetailScreenViewModel = hiltViewModel()) {
@@ -34,7 +42,7 @@ fun NoteDetailScreen(sentNote: Note, navController: NavController, viewModel: No
 
     Scaffold(
         topBar = {
-            NoteAddTopAppBar()
+            NoteDetailTopAppBar()
         },
         content = {
             Column(modifier = Modifier
@@ -46,14 +54,22 @@ fun NoteDetailScreen(sentNote: Note, navController: NavController, viewModel: No
                     .fillMaxWidth()
                     .padding(start = 16.dp, end = 16.dp),
                     singleLine = true,
-                    label = { Text(text = "Title") },
+                    label = { Text(text = stringResource(id = R.string.title)) },
                     keyboardActions = KeyboardActions(
                         onNext = { focusManager.moveFocus(FocusDirection.Down) }
                     ),
                     keyboardOptions = KeyboardOptions(
                         imeAction = ImeAction.Next
                     ),
-                    shape = RoundedCornerShape(10)
+                    shape = RoundedCornerShape(10),
+                    colors = TextFieldDefaults.textFieldColors(
+                        focusedLabelColor = Blue600,
+                        unfocusedLabelColor = Blue600,
+                        unfocusedIndicatorColor = Blue500,
+                        focusedIndicatorColor = Blue500,
+                        backgroundColor = Color.White,
+                        cursorColor = Blue500
+                    )
                 )
 
                 Spacer(modifier = Modifier.heightIn(20.dp))
@@ -62,19 +78,27 @@ fun NoteDetailScreen(sentNote: Note, navController: NavController, viewModel: No
                     .fillMaxWidth()
                     .padding(start = 16.dp, end = 16.dp),
                     singleLine = false,
-                    label = { Text(text = "Note") },
+                    label = { Text(text = stringResource(id = R.string.note)) },
                     keyboardActions = KeyboardActions(
                         onNext = { focusManager.moveFocus(FocusDirection.Down) }
                     ),
                     keyboardOptions = KeyboardOptions(
                         imeAction = ImeAction.None
                     ),
-                    shape = RoundedCornerShape(10)
+                    shape = RoundedCornerShape(10),
+                    colors = TextFieldDefaults.textFieldColors(
+                        focusedLabelColor = Blue600,
+                        unfocusedLabelColor = Blue600,
+                        unfocusedIndicatorColor = Blue500,
+                        focusedIndicatorColor = Blue500,
+                        backgroundColor = Color.White,
+                        cursorColor = Blue500
+                    )
                 )
             }
         },
         floatingActionButton = {
-            FloatingActionButton(onClick = {
+            ExtendedFloatingActionButton(onClick = {
                 if (noteTitle.trim().isEmpty() && noteDesc.trim().isEmpty()){
                     viewModel.showToast()
                 } else {
@@ -86,9 +110,13 @@ fun NoteDetailScreen(sentNote: Note, navController: NavController, viewModel: No
 
                     navController.navigate("notelist")
                 }
-            }) {
-                Icon(imageVector = Icons.Default.Done, contentDescription = null)
-            }
+            }, contentColor = Color.White, backgroundColor = Blue600,
+                text = {  Text(text = "Update") },
+                icon ={ Icon(Icons.Filled.Done,null)},
+            )
+        },
+        bottomBar = {
+            MainBannerAdView()
         }
     )
 }

@@ -1,5 +1,8 @@
 package com.erkindilekci.notebook.notelistscreen
 
+import android.app.Activity
+import android.app.Application
+import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.erkindilekci.notebook.repo.NoteRepository
@@ -15,5 +18,9 @@ class NoteListScreenViewModel @Inject constructor(private val noteRepository: No
         viewModelScope.launch {
             noteRepository.deleteNote(note_id)
         }
+    }
+
+    fun onBackClick(){
+
     }
 }
