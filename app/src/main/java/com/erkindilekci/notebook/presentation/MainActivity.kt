@@ -1,4 +1,4 @@
-package com.erkindilekci.notebook
+package com.erkindilekci.notebook.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,10 +9,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.erkindilekci.notebook.noteaddscreen.NoteAddScreen
-import com.erkindilekci.notebook.notedetailscreen.NoteDetailScreen
-import com.erkindilekci.notebook.notelistscreen.NoteListScreen
-import com.erkindilekci.notebook.room.Note
+import com.erkindilekci.notebook.presentation.noteaddscreen.NoteAddScreen
+import com.erkindilekci.notebook.presentation.notedetailscreen.NoteDetailScreen
+import com.erkindilekci.notebook.presentation.notelistscreen.NoteListScreen
+import com.erkindilekci.notebook.domain.model.Note
 import com.google.android.gms.ads.MobileAds
 import com.google.gson.Gson
 import dagger.hilt.android.AndroidEntryPoint

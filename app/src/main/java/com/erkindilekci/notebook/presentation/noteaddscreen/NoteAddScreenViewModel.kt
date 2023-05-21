@@ -1,12 +1,12 @@
-package com.erkindilekci.notebook.noteaddscreen
+package com.erkindilekci.notebook.presentation.noteaddscreen
 
 
 import android.app.Application
 import android.widget.Toast
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.erkindilekci.notebook.repo.NoteRepository
-import com.erkindilekci.notebook.room.Note
+import com.erkindilekci.notebook.domain.repo.NoteRepository
+import com.erkindilekci.notebook.domain.model.Note
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

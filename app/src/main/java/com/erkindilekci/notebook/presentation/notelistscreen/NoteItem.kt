@@ -1,4 +1,4 @@
-package com.erkindilekci.notebook.notelistscreen
+package com.erkindilekci.notebook.presentation.notelistscreen
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.background
@@ -15,7 +15,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.erkindilekci.notebook.room.Note
+import com.erkindilekci.notebook.domain.model.Note
 import com.erkindilekci.notebook.ui.theme.*
 
 @Composable

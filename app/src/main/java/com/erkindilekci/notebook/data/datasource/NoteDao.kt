@@ -1,8 +1,9 @@
-package com.erkindilekci.notebook.room
+package com.erkindilekci.notebook.data.datasource
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
+import com.erkindilekci.notebook.domain.model.Note
 import kotlinx.coroutines.flow.Flow
 
 

@@ -1,7 +1,8 @@
-package com.erkindilekci.notebook.repo
+package com.erkindilekci.notebook.data.repo
 
-import com.erkindilekci.notebook.room.Note
-import com.erkindilekci.notebook.room.NoteDao
+import com.erkindilekci.notebook.domain.repo.NoteRepository
+import com.erkindilekci.notebook.domain.model.Note
+import com.erkindilekci.notebook.data.datasource.NoteDao
 import kotlinx.coroutines.flow.Flow
 
 class NoteRepositoryImpl(private val noteDao: NoteDao): NoteRepository {

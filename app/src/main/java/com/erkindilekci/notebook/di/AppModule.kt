@@ -1,10 +1,10 @@
-package com.erkindilekci.notebook.util
+package com.erkindilekci.notebook.di
 
 import android.app.Application
 import androidx.room.Room
-import com.erkindilekci.notebook.room.NoteDatabase
-import com.erkindilekci.notebook.repo.NoteRepository
-import com.erkindilekci.notebook.repo.NoteRepositoryImpl
+import com.erkindilekci.notebook.data.datasource.NoteDatabase
+import com.erkindilekci.notebook.domain.repo.NoteRepository
+import com.erkindilekci.notebook.data.repo.NoteRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

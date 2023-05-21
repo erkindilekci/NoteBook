@@ -1,11 +1,8 @@
-package com.erkindilekci.notebook.notelistscreen
+package com.erkindilekci.notebook.presentation.notelistscreen
 
-import android.app.Activity
-import android.app.Application
-import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.erkindilekci.notebook.repo.NoteRepository
+import com.erkindilekci.notebook.domain.repo.NoteRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

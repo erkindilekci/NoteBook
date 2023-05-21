@@ -1,4 +1,4 @@
-package com.erkindilekci.notebook.notedetailscreen
+package com.erkindilekci.notebook.presentation.noteaddscreen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -13,11 +13,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.erkindilekci.notebook.R
 import com.erkindilekci.notebook.ui.theme.Blue700
 
 @Composable
-fun NoteDetailTopAppBar() {
+fun NoteAddTopAppBar() {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -27,7 +26,7 @@ fun NoteDetailTopAppBar() {
         horizontalArrangement = Arrangement.Center
     ) {
         Text(
-            text = stringResource(id = R.string.note_detail),
+            text = stringResource(id = com.erkindilekci.notebook.R.string.add_note),
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.SemiBold,
             color = Color.White,

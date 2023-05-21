@@ -1,4 +1,4 @@
-package com.erkindilekci.notebook.room
+package com.erkindilekci.notebook.domain.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

@@ -1,6 +1,6 @@
-package com.erkindilekci.notebook.repo
+package com.erkindilekci.notebook.domain.repo
 
-import com.erkindilekci.notebook.room.Note
+import com.erkindilekci.notebook.domain.model.Note
 import kotlinx.coroutines.flow.Flow
 
 interface NoteRepository {

@@ -1,4 +1,4 @@
-package com.erkindilekci.notebook.noteaddscreen
+package com.erkindilekci.notebook.presentation.noteaddscreen
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -19,9 +19,9 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.erkindilekci.notebook.MainBannerAdView
+import com.erkindilekci.notebook.presentation.util.MainBannerAdView
 import com.erkindilekci.notebook.R
-import com.erkindilekci.notebook.room.Note
+import com.erkindilekci.notebook.domain.model.Note
 import com.erkindilekci.notebook.ui.theme.Blue500
 import com.erkindilekci.notebook.ui.theme.Blue600
 

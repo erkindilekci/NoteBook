@@ -1,4 +1,4 @@
-package com.erkindilekci.notebook.notelistscreen
+package com.erkindilekci.notebook.presentation.notedetailscreen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -17,14 +17,17 @@ import com.erkindilekci.notebook.R
 import com.erkindilekci.notebook.ui.theme.Blue700
 
 @Composable
-fun NoteListScreenTopAppBar() {
+fun NoteDetailTopAppBar() {
     Row(
-        modifier = Modifier.fillMaxWidth().height(56.dp).background(Blue700),
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(56.dp)
+            .background(Blue700),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Center
     ) {
         Text(
-            text = stringResource(id = R.string.notes),
+            text = stringResource(id = R.string.note_detail),
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.SemiBold,
             color = Color.White,
